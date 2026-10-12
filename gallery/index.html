@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Адаптивная фотогалерея</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="gallery.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="gallery-page">
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <p class="eyebrow">Задание 02</p>
+      <a class="back-link" href="../index.html">← К заданиям</a>
+    </header>
+
+    <main class="gallery-wrap">
+      <header class="gallery-head">
+        <h1>Адаптивная фотогалерея</h1>
+      </header>
+
+      <section
+        class="slider"
+        aria-roledescription="карусель"
+        aria-label="Фотогалерея"
+      >
+        <div class="slider-viewport">
+          <ul class="slider-track" id="slider-track">
+            <li class="slide is-active">
+              <img
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=80"
+                alt="Рабочий стол с ноутбуком и кодом"
+                width="1400"
+                height="900"
+              />
+            </li>
+            <li class="slide">
+              <img
+                src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1400&q=80"
+                alt="Ноутбук с открытым редактором кода"
+                width="1400"
+                height="900"
+              />
+            </li>
+            <li class="slide">
+              <img
+                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1400&q=80"
+                alt="Монитор с исходным кодом"
+                width="1400"
+                height="900"
+              />
+            </li>
+            <li class="slide">
+              <img
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1400&q=80"
+                alt="Экран с синтаксической подсветкой"
+                width="1400"
+                height="900"
+              />
+            </li>
+            <li class="slide">
+              <img
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80"
+                alt="Люди обсуждают интерфейс за столом"
+                width="1400"
+                height="900"
+              />
+            </li>
+          </ul>
+        </div>
+
+        <button
+          type="button"
+          class="slider-btn prev"
+          id="prev-btn"
+          aria-label="Предыдущий слайд"
+        >
+          ‹
+        </button>
+        <button
+          type="button"
+          class="slider-btn next"
+          id="next-btn"
+          aria-label="Следующий слайд"
+        >
+          ›
+        </button>
+
+        <div class="slider-meta">
+          <p class="counter">
+            <span id="current-slide">1</span> / <span id="total-slides">5</span>
+          </p>
+          <div
+            class="dots"
+            id="dots"
+            role="tablist"
+            aria-label="Навигация по слайдам"
+          ></div>
+        </div>
+      </section>
+
+      <section class="thumbs" aria-label="Миниатюры">
+        <button type="button" class="thumb is-active" data-index="0">
+          <img
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=320&q=60"
+            alt=""
+          />
+        </button>
+        <button type="button" class="thumb" data-index="1">
+          <img
+            src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=320&q=60"
+            alt=""
+          />
+        </button>
+        <button type="button" class="thumb" data-index="2">
+          <img
+            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=320&q=60"
+            alt=""
+          />
+        </button>
+        <button type="button" class="thumb" data-index="3">
+          <img
+            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=320&q=60"
+            alt=""
+          />
+        </button>
+        <button type="button" class="thumb" data-index="4">
+          <img
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=320&q=60"
+            alt=""
+          />
+        </button>
+      </section>
+    </main>
+
+    <script src="gallery.js"></script>
+  </body>
+</html>

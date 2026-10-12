@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тест по веб-программированию</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="quiz.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="quiz-page">
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <p class="eyebrow">Задание 01</p>
+      <a class="back-link" href="../index.html">← К заданиям</a>
+    </header>
+
+    <main class="quiz-wrap">
+      <header class="quiz-head">
+        <h1>Тест по веб-программированию</h1>
+        <p class="lead">
+          Внимательно ответьте на шесть вопросов, а затем нажмите «Проверить».
+        </p>
+      </header>
+
+      <form id="quiz-form" class="quiz-form" novalidate>
+        <div class="questions">
+          <!-- 1. Radio -->
+          <div class="q-card" data-q="1">
+            <h2 class="q-title">
+              <span class="q-label">Вопрос 1</span> Какой тег задаёт заголовок
+              страницы во вкладке браузера?
+            </h2>
+            <div class="options" role="group" aria-label="Вопрос 1">
+              <label class="opt"
+                ><input type="radio" name="q1" value="header" />
+                <code>&lt;header&gt;</code></label
+              >
+              <label class="opt"
+                ><input type="radio" name="q1" value="title" />
+                <code>&lt;title&gt;</code></label
+              >
+              <label class="opt"
+                ><input type="radio" name="q1" value="h1" />
+                <code>&lt;h1&gt;</code></label
+              >
+              <label class="opt"
+                ><input type="radio" name="q1" value="meta" />
+                <code>&lt;meta&gt;</code></label
+              >
+            </div>
+          </div>
+
+          <!-- 2. Checkboxes -->
+          <div class="q-card" data-q="2">
+            <h2 class="q-title">
+              <span class="q-label">Вопрос 2</span> Какие свойства относятся к
+              Flexbox? (несколько ответов)
+            </h2>
+            <div class="options" role="group" aria-label="Вопрос 2">
+              <label class="opt"
+                ><input type="checkbox" name="q2" value="justify-content" />
+                justify-content</label
+              >
+              <label class="opt"
+                ><input type="checkbox" name="q2" value="float" /> float</label
+              >
+              <label class="opt"
+                ><input type="checkbox" name="q2" value="align-items" />
+                align-items</label
+              >
+              <label class="opt"
+                ><input type="checkbox" name="q2" value="flex-direction" />
+                flex-direction</label
+              >
+            </div>
+          </div>
+
+          <!-- 3. Select -->
+          <div class="q-card" data-q="3">
+            <h2 class="q-title">
+              <span class="q-label">Вопрос 3</span> Какой HTTP-метод обычно
+              используют для отправки формы?
+            </h2>
+            <label class="field-label" for="q3">Выберите ответ</label>
+            <select id="q3" name="q3">
+              <option value="" selected>— не выбрано —</option>
+              <option value="GET">GET</option>
+              <option value="POST">POST</option>
+              <option value="PUT">PUT</option>
+              <option value="DELETE">DELETE</option>
+            </select>
+          </div>
+
+          <!-- 4. Text input -->
+          <div class="q-card" data-q="4">
+            <h2 class="q-title">
+              <span class="q-label">Вопрос 4</span> Какое CSS-свойство меняет
+              цвет текста?
+            </h2>
+            <label class="field-label" for="q4"
+              >Введите название свойства латиницей</label
+            >
+            <input
+              type="text"
+              id="q4"
+              name="q4"
+              autocomplete="off"
+              placeholder="например, background"
+              spellcheck="false"
+            />
+          </div>
+
+          <!-- 5. Textarea -->
+          <div class="q-card" data-q="5">
+            <h2 class="q-title">
+              <span class="q-label">Вопрос 5</span> Напишите HTML-тег для абзаца
+              (с угловыми скобками)
+            </h2>
+            <label class="field-label" for="q5">Короткий ответ</label>
+            <textarea
+              id="q5"
+              name="q5"
+              rows="3"
+              placeholder="&lt;...&gt;"
+              spellcheck="false"
+            ></textarea>
+          </div>
+
+          <!-- 6. Range -->
+          <div class="q-card" data-q="6">
+            <h2 class="q-title">
+              <span class="q-label">Вопрос 6</span> Сколько уровней заголовков в
+              HTML (<code>h1</code>–…)?
+            </h2>
+            <label class="field-label" for="q6"
+              >Передвиньте ползунок: <strong id="q6-value">3</strong></label
+            >
+            <input
+              type="range"
+              id="q6"
+              name="q6"
+              min="1"
+              max="8"
+              step="1"
+              value="3"
+            />
+            <div class="range-marks" aria-hidden="true">
+              <span>1</span><span>2</span><span>3</span><span>4</span
+              ><span>5</span><span>6</span><span>7</span><span>8</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="quiz-actions">
+          <button type="submit" class="btn-primary">Проверить тест</button>
+          <button type="reset" class="btn-ghost" id="reset-btn">
+            Сбросить
+          </button>
+        </div>
+      </form>
+
+      <section id="results" class="results" hidden aria-live="polite">
+        <h2>Результаты</h2>
+        <p class="score-line">
+          Правильных ответов: <strong id="score-correct">0</strong> из
+          <strong>6</strong>
+        </p>
+        <div id="wrong-block" class="wrong-block" hidden>
+          <h3>Неправильные ответы</h3>
+          <ul id="wrong-list"></ul>
+        </div>
+        <p id="all-correct" class="all-correct" hidden>
+          Все ответы верны — отличная работа.
+        </p>
+      </section>
+    </main>
+
+    <script src="quiz.js"></script>
+  </body>
+</html>
